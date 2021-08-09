@@ -9,10 +9,12 @@ public class Snake_Ladder {
     public static void main(String[] args) {
         Random ran=new Random();
         int position=0;
+        int i=0;
 
         do {
             int option = ran.nextInt(3);
             int die_no = ran.nextInt(6) + 1;
+            i++;
 
             System.out.println("you got " + die_no);
 
@@ -32,5 +34,6 @@ public class Snake_Ladder {
 
             System.out.println("Player 1 Currently on :- " + position);
         }while (position<100);
+        System.out.println("die rolled for :- "+i+" times");
     }
 }
