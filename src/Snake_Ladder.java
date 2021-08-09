@@ -19,6 +19,8 @@ public class Snake_Ladder {
             if (option == ladder) {
                 System.out.println("ladder");
                 position = die_no + position;
+                if (position>100)
+                    position=position-die_no;
             } else if (option == snake) {
                 System.out.println("snake");
                 position = position - die_no;
@@ -29,6 +31,6 @@ public class Snake_Ladder {
             }
 
             System.out.println("Player 1 Currently on :- " + position);
-        }while (position<100||position>100);
+        }while (position<100);
     }
 }
